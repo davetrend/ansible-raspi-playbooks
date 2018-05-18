@@ -1,0 +1,13 @@
+# Install git
+# 
+# 
+# 
+#   
+
+    - name: install git
+      become: yes
+      apt:
+        name: git
+        update_cache: yes
+
+

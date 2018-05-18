@@ -1,0 +1,10 @@
+# Install emacs
+# 
+# 
+# 
+#   
+
+    - name: install emacs
+      apt:
+        name: emacs
+        update_cache: yes
