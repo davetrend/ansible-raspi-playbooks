@@ -1,6 +1,6 @@
 # ansible-playbook -i ~/ansible/hosts /playbooks/pi-hole.yml
 ---
-- hosts: pihole
+- hosts: pi-holes
   gather_facts: yes
 
   tasks:
@@ -10,6 +10,7 @@
 
      # Download the latest version of the Dymo LabelMaker 450 Drivers using git
     - name: Git clone pi-hole
+      become: yes
       git:
         repo: https://github.com/pi-hole/pi-hole.git
         dest:  /home/pi/Pi-hole

@@ -1,0 +1,5 @@
+- hosts: servers
+
+  roles:
+    - dev-sec.os-hardening
+  become: YES
